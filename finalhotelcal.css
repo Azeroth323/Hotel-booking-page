@@ -1,0 +1,17 @@
+/* Basic styling for the yellow navigation bar */
+nav {
+  background-color: #f8d049; /* Yellow background color */
+  padding: 10px 20px; /* Padding inside the navigation bar */
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Distribute items evenly across the width */
+}
+
+nav a {
+  color: black; /* Text color for navigation links */
+  text-decoration: none; /* Remove underline from links */
+  font-weight: bold; /* Bold text */
+}
+
+nav a:hover {
+  color: #333; /* Text color on hover */
+}
