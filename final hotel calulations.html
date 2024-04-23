@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Room Cost Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styling for the yellow navigation bar */
+        nav {
+            background-color: #f8d049; /* Yellow background color */
+            padding: 10px 20px; /* Padding inside the navigation bar */
+        }
+
+        nav a {
+            color: black; /* Text color for navigation links */
+            text-decoration: none; /* Remove underline from links */
+            font-weight: bold; /* Bold text */
+            margin-right: 20px; /* Spacing between navigation links */
+        }
+
+        nav a:hover {
+            color: #333; /* Text color on hover */
+        }
+
+        /* Container for room options */
+        .roomContainer {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .roomContainer div {
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 30%;
+            text-align: center;
+        }
+
+        .roomContainer div:hover {
+            background-color: #f0f0f0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Rooms</a>
+        <a href="#">Facilities</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <h1>Hotel Room Cost Calculator</h1>
+
+    <div class="roomContainer">
+        <div onclick="showRoomDetails('standard')">Standard Room</div>
+        <div onclick="showRoomDetails('deluxe')">Deluxe Room</div>
+        <div onclick="showRoomDetails('suite')">Suite</div>
+    </div>
+
+    <div id="roomDetails">
+        <!-- Room details (image, description, and rate) will be displayed here -->
+    </div>
+
+    <label for="nights">Number of Nights:</label>
+    <input type="number" id="nights" min="1" value="1"><br><br>
+
+    <p>Total Cost: <span id="totalCost">$0</span></p>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
